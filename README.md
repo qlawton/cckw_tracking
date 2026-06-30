@@ -12,7 +12,7 @@ Written by **Quinton A. Lawton** (Northern Illinois University; formerly NSF Nat
 
 If you use this package, please cite the repository and the paper describing the methodology:
 
-Lawton, Q. A., R. Rios-Berrios, F. Judt, L. Magnusson, and M. Köhler, 2025: On the Representation of Convectively Coupled Kelvin Waves in Operational Forecast Models: An Object-Tracking Perspective. *Weather and Forecasting*, 41(5), 1073–1090. https://doi.org/10.1175/WAF-D-25-0182.1
+> Lawton, Q. A., R. Rios-Berrios, F. Judt, L. Magnusson, and M. Köhler, 2026: On the Representation of Convectively Coupled Kelvin Waves in Operational Forecast Models: An Object-Tracking Perspective. *Weather and Forecasting*, 41(5), 1073–1090. https://doi.org/10.1175/WAF-D-25-0182.1
 
 The wavenumber-frequency filtering follows [Wheeler and Kiladis (1999)](https://doi.org/10.1175/1520-0469(1999)056<0374:CCEWAO>2.0.CO;2). The `kf_filter` function is adapted from Maria Gehne's [tropical_diagnostics](https://github.com/mgehne/tropical_diagnostics) package.
 
@@ -94,7 +94,7 @@ Returns an `xr.DataArray` of filtered precipitation on the same grid, sliced to 
 
 ### `ccew_track.track(filtered, wave="Kelvin", normalize=None, init_threshold=1.0, cont_threshold=0.25, day_cut=3, back_allow=5, daily_mean=True)`
 
-Finds local peaks in a Hovmöller diagram of the filtered signal and links them forward (or backward for westward waves) in time using a physical speed limit. See [Lawton et al. (2025)](https://doi.org/10.1175/WAF-D-25-0182.1) for a full description of the algorithm.
+Finds local peaks in a Hovmöller diagram of the filtered signal and links them forward (or backward for westward waves) in time using a physical speed limit. See [Lawton et al. (2026)](https://doi.org/10.1175/WAF-D-25-0182.1) for a full description of the algorithm.
 
 | Parameter | Description |
 |-----------|-------------|

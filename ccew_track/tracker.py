@@ -45,7 +45,7 @@ def track(
     ----------
     filtered : xr.DataArray
         Kelvin/TD/ER-filtered precipitation from ``ccew_track.filter()``.
-        Must have 'time', 'lat', and 'lon' coordinates and contain daily data.
+        Must have 'time', 'lat', and 'lon' coordinates. Any temporal resolution is supported.
     wave : str
         Wave type: 'Kelvin', 'TD', 'ER_N', or 'ER_S'.
     normalize : xr.DataArray, bool, or None

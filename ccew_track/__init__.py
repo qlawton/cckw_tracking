@@ -59,5 +59,5 @@ def fetch_example_data(data_dir=None):
         known_hash=_EXAMPLE_HASH,
         fname="imerg_year_2018.nc",
         path=str(data_dir),
-        progressbar=True,
+        progressbar=False,
     )

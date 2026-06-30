@@ -121,18 +121,15 @@ Returns an `xr.Dataset` with variables `{name}_lon` and `{name}_str`, both dimen
 
 ## Example data
 
-The notebook uses `example_data/imerg_year_2018.nc` — a year of 6-hourly [IMERG Late Run](https://doi.org/10.5067/GPM/IMERG/3B-HH-L/07) precipitation, pre-processed to 1° × 1° resolution over the tropical band (10 °S–20 °N). This file is not tracked in the repository due to its size (~60 MB).
-
-To get it, download 6-hourly IMERG Late Run data for 2018 from [NASA GES DISC](https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGHHL_07/summary) and regrid/slice to match the expected format:
+The notebook uses `example_data/imerg_year_2018.nc` — a year of 6-hourly [IMERG Late Run v7](https://doi.org/10.5067/GPM/IMERG/3B-HH-L/07) precipitation remapped to 1° × 1° over the tropical band (10 °S–20 °N). The file is hosted on Zenodo (doi:[10.5281/zenodo.21054811](https://doi.org/10.5281/zenodo.21054811)) and can be downloaded directly from Python:
 
 ```python
-# Expected format
-<xarray.DataArray 'precipitation'> (time: 1460, lon: 360, lat: 30)
-# time: 6-hourly steps for 2018 (00Z 1 Jan – 18Z 31 Dec)
-# lon: 0.5 to 359.5 at 1°
-# lat: -9.5 to 19.5 at 1°
-# units: mm/hr
+# requires: pip install pooch
+import ccew_track
+path = ccew_track.fetch_example_data()   # ~60 MB, cached after first download
 ```
+
+Or manually from the [Zenodo record](https://zenodo.org/records/21054811). Place the file in `example_data/` before running the notebook.
 
 ---
 

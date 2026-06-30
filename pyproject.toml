@@ -21,6 +21,7 @@ dependencies = [
 
 [project.optional-dependencies]
 plot = ["matplotlib"]
+data = ["pooch"]
 
 [tool.setuptools.packages.find]
 where = ["."]

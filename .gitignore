@@ -1,0 +1,17 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Large data files — keep example_data/ tracked except NetCDF/GRIB
+example_data/*.nc
+example_data/*.grb
+example_data/*.grb2

@@ -100,7 +100,7 @@ Finds local peaks in a Hovmöller diagram of the filtered signal and links them 
 |-----------|-------------|
 | `filtered` | Output of `ccew_track.filter()` |
 | `wave` | `"Kelvin"`, `"TD_N"` (0–15 °N), `"TD_S"` (15 °S–0), `"ER_N"` (0–10 °N), `"ER_S"` (10 °S–0), `"ER_NS"` (10 °S–10 °N) |
-| `normalize` | `None`: normalise by the std dev of the Hovmöller (default). `xr.DataArray`: divide by this field directly — must be in std dev units, not variance. `False`: skip normalisation and track raw values. |
+| `normalize` | `None`: normalise by the std dev of the Hovmöller (default). `xr.DataArray`: divide by this field directly. Must be in std dev units, not variance. `False`: skip normalisation and track raw values. |
 | `init_threshold` | Minimum amplitude (std devs) to start a new track. Default 1.0. |
 | `cont_threshold` | Minimum amplitude (std devs) to extend an existing track. Default 0.25. |
 | `day_cut` | Minimum track length in days. Default 3. |
